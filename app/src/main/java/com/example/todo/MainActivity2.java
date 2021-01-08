@@ -24,10 +24,17 @@ public class MainActivity2 extends AppCompatActivity implements MyAdapter.custom
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        readListOfTask(); // Take the list of task
+        /*readListOfTask(); // Take the list of task
         readNameTask(); // and the list of the name
-        checkerIntent(); // Check if come from the name activity
+        checkerIntent(); // Check if come from the name activity*/
 
+        try {
+            Tab = Control.readListOfTask(Tab, openFileInput("List of Task.txt"));
+            ListTask = Control.readNameTask(ListTask,openFileInput("List of NameTask.txt"));
+            checkerIntent();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         t = findViewById(R.id.textView);
         test = findViewById(R.id.test);
@@ -93,8 +100,15 @@ public class MainActivity2 extends AppCompatActivity implements MyAdapter.custom
     @Override
     protected void onStop() { //When the activity is onStop save the Lists
         super.onStop();
-        writeListOfTask();
-        writeNameTask();
+        //writeListOfTask();
+        //writeNameTask();
+
+        try {
+            Control.writeListOfTask(Tab ,openFileOutput("List of Task.txt", Context.MODE_PRIVATE));
+            Control.writeNameTask(ListTask, openFileOutput("List of NameTask.txt", Context.MODE_PRIVATE));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -9,9 +9,10 @@ import android.view.View;
 import android.widget.Button;
 
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button T, N;
+    Button T, N, M;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        M = findViewById(R.id.Modify);
         T = findViewById(R.id.tasklists);
         N = findViewById(R.id.newlists);
 
@@ -32,6 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         N.setOnClickListener(this); //Lead to the CreationActivity
 
+        //Lead to the Possibles actions who can be done on The Lists
+        M.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ActionLists.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //Method used by N

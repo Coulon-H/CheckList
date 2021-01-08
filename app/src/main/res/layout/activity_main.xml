@@ -10,21 +10,21 @@
 
     <Button
         android:id="@+id/tasklists"
-        android:layout_width="173dp"
+        android:layout_width="216dp"
         android:layout_height="55dp"
         android:background="@drawable/custom_button"
         android:text="Lists"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintVertical_bias="0.267" />
 
     <Button
         android:id="@+id/newlists"
-        android:layout_width="173dp"
+        android:layout_width="216dp"
         android:layout_height="55dp"
         android:layout_marginBottom="236dp"
         android:background="@drawable/custom_button"
@@ -32,10 +32,22 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tasklists"
-        app:layout_constraintVertical_bias="0.869" />
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
+        android:id="@+id/Modify"
+        android:layout_width="216dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_button"
+        android:text="Modify LIsts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
