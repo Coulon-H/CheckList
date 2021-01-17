@@ -52,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity implements MyAdapter.custom
         }
     }
 
-    private void readListOfTask(){
+    /*private void readListOfTask(){
         try{
             FileInputStream fis = openFileInput("List of Task.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -94,7 +94,7 @@ public class MainActivity2 extends AppCompatActivity implements MyAdapter.custom
         }catch (IOException e){
             e.printStackTrace();
         }
-    }
+    }*/
 
 
     @Override

@@ -1,6 +1,8 @@
 package com.example.todo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,13 @@ public class ActionLists extends AppCompatActivity {
         delete = findViewById(R.id.deleteListAndTask);
         editTasks = findViewById(R.id.editTask);
 
+        addTasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ActionLists.this, ActionActivity00.class);
+                startActivity(i);
+            }
+        });
 
 
     }

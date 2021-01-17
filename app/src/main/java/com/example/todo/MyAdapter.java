@@ -49,12 +49,14 @@ public class MyAdapter extends ArrayAdapter<String> {
         final Button b = convertView.findViewById(R.id.cptList);
         b.setText(s);
         b.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("UseCompatLoadingForDrawables")
             @Override
             public void onClick(View v) {
                 if(listener != null){
                     listener.onButtonListener(position);
                 }
-                b.setBackgroundColor(Color.WHITE);
+                //b.setBackgroundColor(Color.WHITE);
+                b.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.white));
                 Toast.makeText(context, "Button position "+ (position + 1) +" clicked", Toast.LENGTH_SHORT).show();
             }
         });
