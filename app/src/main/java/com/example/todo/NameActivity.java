@@ -41,12 +41,14 @@ public class NameActivity extends AppCompatActivity {
     private void checker(String s){ //Take the name of the list if none give a name by default
         if(s.equals("")){
             String tlname = "Tasklist ";
-            i = new Intent(NameActivity.this, MainActivity2.class);
+            i = new Intent(NameActivity.this, MainActivity.class);
             i.putExtra("NameTaskList", tlname);
         }else{
-            i = new Intent(NameActivity.this, MainActivity2.class);
+            i = new Intent(NameActivity.this, MainActivity.class);
             i.putExtra("NameTaskList", s);
         }
+
+
         i.putStringArrayListExtra("List",l);
         startActivity(i);//Start a new Activity
     }

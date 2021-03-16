@@ -8,46 +8,33 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/tasklists"
-        android:layout_width="216dp"
-        android:layout_height="55dp"
-        android:background="@drawable/custom_button"
-        android:text="Lists"
-        android:textSize="17sp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/menu_rounded"
+        app:itemIconTint="@drawable/selection"
+        app:itemTextColor="@drawable/selection"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu_bar" />
 
-    <Button
-        android:id="@+id/newlists"
-        android:layout_width="216dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="236dp"
-        android:background="@drawable/custom_button"
-        android:text="New TaskLists"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="541dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tasklists"
-        app:layout_constraintVertical_bias="0.347" />
-
-    <Button
-        android:id="@+id/Modify"
-        android:layout_width="216dp"
-        android:layout_height="55dp"
-        android:background="@drawable/custom_button"
-        android:text="Modify LIsts"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

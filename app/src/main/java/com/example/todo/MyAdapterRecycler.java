@@ -40,7 +40,7 @@ public class MyAdapterRecycler extends RecyclerView.Adapter<MyAdapterRecycler.My
         return l.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nameLister;
 
         public MyViewHolder(@NonNull View itemView) {

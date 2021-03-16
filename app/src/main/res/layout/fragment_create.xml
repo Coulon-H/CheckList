@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E0240"
+    tools:context=".CreateFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cptTask"
+            android:layout_width="184dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:text="Task "
+            android:textColor="#00d7f4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/task"
+            android:layout_width="275dp"
+            android:layout_height="96dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#0084BF"
+            android:textColorHint="#08A5EC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.238" />
+
+        <Button
+            android:id="@+id/tasksaver"
+            android:layout_width="233dp"
+            android:layout_height="37dp"
+            android:background="@drawable/custom_button"
+            android:gravity="center"
+            android:text="Save Task"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Save Task" />
+
+        <Button
+            android:id="@+id/listsaver"
+            android:layout_width="142dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/custom_button"
+            android:text="Save List"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/delList"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.634" />
+
+        <Button
+            android:id="@+id/delList"
+            android:layout_width="142dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_button"
+            android:text="Cancel"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.636" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

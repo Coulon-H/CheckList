@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/list"
+        android:title="Liste"
+        android:icon="@drawable/ic_baseline_view_list"
+    />
+
+    <item
+        android:id="@+id/create"
+        android:title="Créer"
+        android:icon="@drawable/ic_create_list"
+    />
+
+    <item
+        android:id="@+id/action"
+        android:title="Actions"
+        android:icon="@drawable/ic_baseline_list_action"
+    />
+</menu>

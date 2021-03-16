@@ -21,7 +21,7 @@ public class MyAdapter extends ArrayAdapter<String> {
     customListener listener;
 
     public interface customListener{
-        public void onButtonListener(int position);
+        void onButtonListener(int position);
     }
 
     public void setCustomListener(customListener listener){
